@@ -35,18 +35,7 @@ This DAG runs once and uses the TaskFlow decorator syntax for defining tasks and
 
 ---
 
-## 2. Example DAG (exampledag.py)
-
-### File Introduction
-This is a simple example DAG that demonstrates the basic structure of an Airflow workflow. It includes two tasks:
-1. **Start Task**: Prints a message indicating the start of the DAG.
-2. **End Task**: Prints a message indicating the completion of the DAG.
-
-The DAG runs once and serves as a template for understanding the fundamental structure of Airflow DAGs.
-
----
-
-## 3. Machine Learning Pipeline (mlpipeline.py)
+## 2. Machine Learning Pipeline (mlpipeline.py)
 
 ### File Introduction
 This DAG represents a basic machine learning pipeline with the following steps:
@@ -58,11 +47,26 @@ The DAG is scheduled to run weekly and demonstrates how Airflow can be used to a
 
 ---
 
+## 3. Mathematics Operations (maths_operation.py)
+
+### File Introduction
+This DAG demonstrates a simple mathematical operations pipeline using Airflow's traditional DAG syntax. It shows how to define tasks using Python functions and connect them using dependencies.
+
+### DAG Steps:
+1. **Start Number**: Initializes the process with a starting value of 10.
+2. **Add Five**: Adds 5 to the number.
+3. **Multiply by Two**: Multiplies the result by 2.
+4. **Subtract Three**: Subtracts 3 from the result.
+5. **Square Number**: Squares the final value.
+
+This DAG runs once and uses the traditional Airflow operator syntax for defining tasks and dependencies.
+
+---
+
 ## Project Structure
 ```
 dags/
 ├── .airflowignore
-├── exampledag.py
 ├── maths_operation.py
 ├── mlpipeline.py
 ├── taskflowapi.py
